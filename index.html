@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <style>
+        /* Style pour la calculatrice */
+        .calculator {
+            width: 220px; /* Définit la largeur de la calculatrice */
+            margin: 50px auto; /* Ajoute un espace autour de la calculatrice pour la centrer */
+            padding: 20px; /* Ajoute un peu de "padding" (espace intérieur) */
+            border: 2px solid #ccc; /* Définit une bordure grise autour de la calculatrice */
+            border-radius: 10px; /* Arrondit les coins de la bordure */
+            text-align: center; /* Centre le texte à l'intérieur */
+        }
+        .button {
+            width: 40px; /* Largeur des boutons */
+            height: 40px; /* Hauteur des boutons */
+            margin: 5px; /* Espace autour des boutons */
+            font-size: 20px; /* Taille du texte dans les boutons */
+            cursor: pointer; /* Change le curseur en pointeur lorsque l'on passe la souris sur un bouton */
+        }
+        .screen {
+            width: 100%; /* L'écran occupe toute la largeur disponible */
+            height: 40px; /* Hauteur de l'écran */
+            margin-bottom: 10px; /* Espace sous l'écran */
+            text-align: right; /* Aligne le texte à droite */
+            font-size: 20px; /* Taille du texte de l'écran */
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="screen" class="screen" disabled>
+        <!-- Écran de la calculatrice où le résultat sera affiché -->
+        <div>
+            <button class="button" onclick="appendToScreen('7')">7</button>
+            <button class="button" onclick="appendToScreen('8')">8</button>
+            <button class="button" onclick="appendToScreen('9')">9</button>
+            <button class="button" onclick="appendToScreen('/')">/</button>
+        </div>
+        <!-- Lignes de boutons de la calculatrice -->
+        <div>
+            <button class="button" onclick="appendToScreen('4')">4</button>
+            <button class="button" onclick="appendToScreen('5')">5</button>
+            <button class="button" onclick="appendToScreen('6')">6</button>
+            <button class="button" onclick="appendToScreen('*')">*</button>
+        </div>
+        <div>
+            <button class="button" onclick="appendToScreen('1')">1</button>
+            <button class="button" onclick="appendToScreen('2')">2</button>
+            <button class="button" onclick="appendToScreen('3')">3</button>
+            <button class="button" onclick="appendToScreen('-')">-</button>
+        </div>
+        <div>
+            <button class="button" onclick="clearScreen()">C</button>
+            <button class="button" onclick="appendToScreen('0')">0</button>
+            <button class="button" onclick="calculate()">=</button>
+            <button class="button" onclick="appendToScreen('+')">+</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Fichier JavaScript externe -->
+</body>
+</html>
